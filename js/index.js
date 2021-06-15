@@ -10,23 +10,12 @@ const player1 = document.querySelector('.points-player-1'),
 
 /* eventos */
 addEventListener('DOMContentLoaded', () => {
-  rock.addEventListener('click', rockEvent);
-  paper.addEventListener('click', paperEvent);
-  scissor.addEventListener('click', scissorEvent);
+  rock.addEventListener('click', () => playingVsPc('rock'));
+  paper.addEventListener('click', () => playingVsPc('paper'));
+  scissor.addEventListener('click', () => playingVsPc('scissor'));
 });
 
 /* funciones */
-const rockEvent = () => {
-  return playingVsPc('rock');
-};
-
-const paperEvent = () => {
-  return playingVsPc('paper');
-};
-
-const scissorEvent = () => {
-  return playingVsPc('scissor');
-};
 
 const playingVsPc = (eventPlayer = '') => {
   const PC = Math.floor(Math.random() * 3) + 1;
