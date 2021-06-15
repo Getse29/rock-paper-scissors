@@ -1,14 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;700&family=Press+Start+2P&display=swap');
-@import url('body.css');
+@import url('utilities.css');
 @import url('reset.rems.css');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;700&family=Press+Start+2P&display=swap');
 
-:root {
-  --font-primary: 'Kanit', sans-serif;
-  --font-Game: 'Press Start 2P', cursive;
+/* 
+
+  1. Title
+  2. Container Game
+  3. Container Players
+  4. Player 1
+  5. Player 3
+  6. Points Players
+
+*/
+
+
+/* Custom CSS */
+
+/* 1. Title */
+.title{
+  font-size: 5rem;
 }
 
-body{
-  color: #ffffff;
+/* 2. Container Game */
+.game{
+  max-width: 95%;
+  width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
 }
 
+.rock, .paper, .scissor{
+  cursor: pointer;
+  font-size: 8rem;
+}
 
+/* 3. Container Players */
+.players{
+  max-width: 95%;
+  width: 80rem;
+  margin: 5rem auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 4. Player 1 */
+
+/* 5. Player 2 */
+
+/* 6. Points Players */
+.points-player-1, .points-player-2{
+  font-family: var(--font-Game);
+  font-size: 4rem;
+}

@@ -1,0 +1,15 @@
+:root {
+  --font-primary: 'Kanit', sans-serif;
+  --font-Game: 'Press Start 2P', cursive;
+}
+
+.bg-color{
+  background-color: #282c37;
+  text-align: center;
+  color: #ffffff;
+  font-family: var(--font-primary);
+}
+
+.points{
+  font-family: var(--font-Game);
+}
