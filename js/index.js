@@ -34,39 +34,51 @@ const playingVsPc = (eventPlayer = '') => {
   console.log(PC);
   switch (eventPlayer) {
     case 'rock':
-      let rock = 2;
-      if (rock === PC) {
-        return console.log(`Son iguales ${rock === PC}`);
-      } else if (rock >= PC) {
-        return console.log(`Jugador es mayor que PC ${rock >= PC}`);
-      } else if (rock <= PC) {
-        return console.log(`PC es mayor que Jugador ${PC >= rock}`);
-      }
+      logicRock(2, PC);
       break;
 
     case 'paper':
-      let paper = 2;
-      if (paper === PC) {
-        return console.log(`Son iguales ${paper === PC}`);
-      } else if (paper >= PC) {
-        return console.log(`Jugador es mayor que PC ${paper >= PC}`);
-      } else if (paper <= PC) {
-        return console.log(`PC es mayor que Jugador ${PC >= paper}`);
-      }
+      logicPaper(2, PC);
       break;
 
     case 'scissor':
-      let scissor = 2;
-      if (scissor === PC) {
-        return console.log(`Son iguales ${scissor === PC}`);
-      } else if (scissor >= PC) {
-        return console.log(`Jugador es mayor que PC ${scissor >= PC}`);
-      } else if (scissor <= PC) {
-        return console.log(`PC es mayor que Jugador ${PC >= scissor}`);
-      }
+      logiScissor(2, PC);
       break;
     default:
-      console.log('error no se selecciono ninguno');
+      console.log('Error no se selecciono ninguno');
       break;
+  }
+};
+
+const logicRock = (rock = 2, PC = 0) => {
+  console.clear();
+  if (rock === PC) {
+    return console.log(`Son iguales`);
+  } else if (rock >= PC) {
+    return console.log(`Rocka Gana`);
+  } else if (rock <= PC) {
+    return console.log(`Papel Gana`);
+  }
+};
+
+const logicPaper = (paper = 2, PC = 0) => {
+  console.clear();
+  if (paper === PC) {
+    return console.log(`Son iguales`);
+  } else if (paper >= PC) {
+    return console.log(`Papel gana`);
+  } else if (paper <= PC) {
+    return console.log(`Tijeras Gana`);
+  }
+};
+
+const logiScissor = (scissor = 2, PC = 0) => {
+  console.clear();
+  if (scissor === PC) {
+    return console.log(`Son iguales`);
+  } else if (scissor >= PC) {
+    return console.log(`Tijeras Gana`);
+  } else if (scissor <= PC) {
+    return console.log(`Piedra Gana`);
   }
 };
