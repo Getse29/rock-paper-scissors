@@ -1,16 +1,12 @@
+import { logicRock, logicPaper, logiScissor } from './logic/logicGame.js';
 /* variables */
-let pointsPlayer1: number = 0,
-  pointsPC: number = 0,
-  rounds: number = 0;
 
-const player1 = document.querySelector('.points-player-1'),
-  player2 = document.querySelector('.points-pc'),
-  rock = document.querySelector('.rock') as HTMLDivElement,
+const rock = document.querySelector('.rock') as HTMLDivElement,
   paper = document.querySelector('.paper') as HTMLDivElement,
   scissor = document.querySelector('.scissor') as HTMLDivElement;
 
 /* eventos */
-addEventListener('DOMContentLoaded', () => {
+addEventListener('DOMContentLoaded', (): void => {
   rock.addEventListener('click', () => playingVsPc('rock'));
   paper.addEventListener('click', () => playingVsPc('paper'));
   scissor.addEventListener('click', () => playingVsPc('scissor'));
@@ -18,7 +14,7 @@ addEventListener('DOMContentLoaded', () => {
 
 /* funciones */
 
-const playingVsPc = (eventPlayer = '') => {
+const playingVsPc = (eventPlayer: string = ''): void => {
   const PC: number = Math.floor(Math.random() * 3) + 1;
 
   console.log(PC);
@@ -36,31 +32,10 @@ const playingVsPc = (eventPlayer = '') => {
   }
 };
 
-const winner = (player1 = 0, PC = 0): void => {
+const winner = (player: number = 0, PC: number = 0): void => {
   /*  */
 };
 
-const logicRock = (rock = 2, PC = 0): void => {
-  console.clear();
-  if (rock === PC) return console.log(`Son iguales`);
-  else if (rock >= PC) return console.log(`Rocka Gana`);
-  else if (rock <= PC) return console.log(`Papel Gana`);
-
+const resetGame = (): void => {
+  /* reset game */
 };
-
-const logicPaper = (paper = 2, PC = 0): void => {
-  console.clear();
-  if (paper === PC) return console.log(`Son iguales`);
-  else if (paper >= PC) return console.log(`Papel gana`);
-  else if (paper <= PC) return console.log(`Tijeras Gana`);
-
-};
-
-const logiScissor = (scissor = 2, PC = 0): void => {
-  console.clear();
-  if (scissor === PC) return console.log(`Son iguales`);
-  else if (scissor >= PC) return console.log(`Tijeras Gana`);
-  else if (scissor <= PC) return console.log(`Piedra Gana`);
-
-};
-
