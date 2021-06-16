@@ -13,3 +13,8 @@
 .points{
   font-family: var(--font-Game);
 }
+
+button{
+  background-color: #ffffff00;
+  border: none;
+}
