@@ -1,3 +1,5 @@
+import { disabledButton } from './disabledButton.js';
+
 const rock = <HTMLInputElement>document.querySelector('.rock'),
   paper = <HTMLInputElement>document.querySelector('.paper'),
   scissor = <HTMLInputElement>document.querySelector('.scissor'),
@@ -11,9 +13,10 @@ export const pointsHTML = (
   rounds: number
 ): void => {
   if (rounds === 3) {
-    rock.disabled = true;
-    paper.disabled = true;
-    scissor.disabled = true;
+    disabledButton(rock);
+    disabledButton(paper);
+    disabledButton(scissor);
+    return;
   }
 
   return console.log(

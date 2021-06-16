@@ -5,10 +5,10 @@
 /* 
 
   1. Title
-  2. Container Game
-  3. Container Players
-  4. Player 1 and PC
-  5. Points Players
+  3. Container Game
+  4. Container Players
+  5. Player 1 and PC
+  6. Points Players
 
 */
 
@@ -18,9 +18,36 @@
 /* 1. Title */
 .title{
   font-size: 5rem;
+  font-weight: 700;
 }
 
-/* 2. Container Game */
+/* Buttons Game Start and Reset */
+.button-game{
+  font-size: 4rem;
+  margin: 5rem auto 5rem auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.game-init{
+  color: #fff;
+  cursor: pointer;
+}
+
+.game-init{
+  padding: 1rem 2rem;
+  border-radius: .2rem;
+  font-weight: 300;
+}
+
+.game-init:first-child{
+  background-color: rgb(26, 194, 62);
+}
+.game-init:last-child{
+  background-color: rgb(143, 9, 9);
+}
+
+/* 3. Container Game */
 .game{
   max-width: 95%;
   width: 80rem;
@@ -34,7 +61,7 @@
   font-size: 8rem;
 }
 
-/* 3. Container Players */
+/* 4. Container Players */
 .players{
   max-width: 95%;
   width: 80rem;
@@ -43,12 +70,12 @@
   justify-content: space-between;
 }
 
-/* 4. Player 1 and PC*/
+/* 5. Player 1 and PC*/
 .player-1, .player-2{
   font-size: 2rem;
 }
 
-/* 5. Points Players */
+/* 6. Points Players */
 .points-player-1, .points-pc{
   font-family: var(--font-Game);
   font-size: 4rem;
