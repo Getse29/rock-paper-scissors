@@ -5,9 +5,9 @@ let pointsPlayer1: number = 0,
 
 const player1 = document.querySelector('.points-player-1'),
   player2 = document.querySelector('.points-pc'),
-  rock = document.querySelector('.rock'),
-  paper = document.querySelector('.paper'),
-  scissor = document.querySelector('.scissor');
+  rock = document.querySelector('.rock') as HTMLDivElement,
+  paper = document.querySelector('.paper') as HTMLDivElement,
+  scissor = document.querySelector('.scissor') as HTMLDivElement;
 
 /* eventos */
 addEventListener('DOMContentLoaded', () => {
@@ -24,56 +24,43 @@ const playingVsPc = (eventPlayer = '') => {
   console.log(PC);
   switch (eventPlayer) {
     case 'rock':
-      logicRock(2, PC);
-      break;
+      return logicRock(2, PC);
 
     case 'paper':
-      logicPaper(2, PC);
-      break;
+      return logicPaper(2, PC);
 
     case 'scissor':
-      logiScissor(2, PC);
-      break;
+      return logiScissor(2, PC);
     default:
-      console.log('Error no se selecciono ninguno');
-      break;
+      return console.log('Error no se selecciono ninguno');
   }
 };
 
-const winner = (player1 = 0, PC = 0) => {
+const winner = (player1 = 0, PC = 0): void => {
   /*  */
 };
 
 const logicRock = (rock = 2, PC = 0): void => {
   console.clear();
-  if (rock === PC) {
-    return console.log(`Son iguales`);
-  } else if (rock >= PC) {
-    return console.log(`Rocka Gana`);
-  } else if (rock <= PC) {
-    return console.log(`Papel Gana`);
-  }
+  if (rock === PC) return console.log(`Son iguales`);
+  else if (rock >= PC) return console.log(`Rocka Gana`);
+  else if (rock <= PC) return console.log(`Papel Gana`);
+
 };
 
 const logicPaper = (paper = 2, PC = 0): void => {
   console.clear();
-  if (paper === PC) {
-    return console.log(`Son iguales`);
-  } else if (paper >= PC) {
-    return console.log(`Papel gana`);
-  } else if (paper <= PC) {
-    return console.log(`Tijeras Gana`);
-  }
+  if (paper === PC) return console.log(`Son iguales`);
+  else if (paper >= PC) return console.log(`Papel gana`);
+  else if (paper <= PC) return console.log(`Tijeras Gana`);
+
 };
 
 const logiScissor = (scissor = 2, PC = 0): void => {
   console.clear();
-  if (scissor === PC) {
-    return console.log(`Son iguales`);
-  } else if (scissor >= PC) {
-    return console.log(`Tijeras Gana`);
-  } else if (scissor <= PC) {
-    return console.log(`Piedra Gana`);
-  }
+  if (scissor === PC) return console.log(`Son iguales`);
+  else if (scissor >= PC) return console.log(`Tijeras Gana`);
+  else if (scissor <= PC) return console.log(`Piedra Gana`);
+
 };
 

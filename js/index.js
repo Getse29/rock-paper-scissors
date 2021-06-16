@@ -11,55 +11,42 @@ const playingVsPc = (eventPlayer = '') => {
     console.log(PC);
     switch (eventPlayer) {
         case 'rock':
-            logicRock(2, PC);
-            break;
+            return logicRock(2, PC);
         case 'paper':
-            logicPaper(2, PC);
-            break;
+            return logicPaper(2, PC);
         case 'scissor':
-            logiScissor(2, PC);
-            break;
+            return logiScissor(2, PC);
         default:
-            console.log('Error no se selecciono ninguno');
-            break;
+            return console.log('Error no se selecciono ninguno');
     }
 };
 const winner = (player1 = 0, PC = 0) => {
 };
 const logicRock = (rock = 2, PC = 0) => {
     console.clear();
-    if (rock === PC) {
+    if (rock === PC)
         return console.log(`Son iguales`);
-    }
-    else if (rock >= PC) {
+    else if (rock >= PC)
         return console.log(`Rocka Gana`);
-    }
-    else if (rock <= PC) {
+    else if (rock <= PC)
         return console.log(`Papel Gana`);
-    }
 };
 const logicPaper = (paper = 2, PC = 0) => {
     console.clear();
-    if (paper === PC) {
+    if (paper === PC)
         return console.log(`Son iguales`);
-    }
-    else if (paper >= PC) {
+    else if (paper >= PC)
         return console.log(`Papel gana`);
-    }
-    else if (paper <= PC) {
+    else if (paper <= PC)
         return console.log(`Tijeras Gana`);
-    }
 };
 const logiScissor = (scissor = 2, PC = 0) => {
     console.clear();
-    if (scissor === PC) {
+    if (scissor === PC)
         return console.log(`Son iguales`);
-    }
-    else if (scissor >= PC) {
+    else if (scissor >= PC)
         return console.log(`Tijeras Gana`);
-    }
-    else if (scissor <= PC) {
+    else if (scissor <= PC)
         return console.log(`Piedra Gana`);
-    }
 };
 //# sourceMappingURL=index.js.map
