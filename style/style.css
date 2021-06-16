@@ -7,9 +7,8 @@
   1. Title
   2. Container Game
   3. Container Players
-  4. Player 1
-  5. Player 3
-  6. Points Players
+  4. Player 1 and PC
+  5. Points Players
 
 */
 
@@ -44,12 +43,13 @@
   justify-content: space-between;
 }
 
-/* 4. Player 1 */
+/* 4. Player 1 and PC*/
+.player-1, .player-2{
+  font-size: 2rem;
+}
 
-/* 5. Player 2 */
-
-/* 6. Points Players */
-.points-player-1, .points-player-2{
+/* 5. Points Players */
+.points-player-1, .points-pc{
   font-family: var(--font-Game);
   font-size: 4rem;
 }
