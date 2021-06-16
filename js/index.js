@@ -19,8 +19,4 @@ const playingVsPc = (eventPlayer = '') => {
             return console.log('Error no se selecciono ninguno');
     }
 };
-const winner = (player = 0, PC = 0) => {
-};
-const resetGame = () => {
-};
 //# sourceMappingURL=index.js.map

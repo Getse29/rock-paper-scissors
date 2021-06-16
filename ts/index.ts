@@ -31,11 +31,3 @@ const playingVsPc = (eventPlayer: string = ''): void => {
       return console.log('Error no se selecciono ninguno');
   }
 };
-
-const winner = (player: number = 0, PC: number = 0): void => {
-  /*  */
-};
-
-const resetGame = (): void => {
-  /* reset game */
-};
