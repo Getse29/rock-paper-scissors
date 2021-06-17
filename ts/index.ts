@@ -7,7 +7,9 @@ const { disabledButton, enableButton } = buttonDisabled();
 const { rock, paper, scissor, reset } = htmlVariables();
 
 const player1 = document.querySelector('.points-player-1') as HTMLDivElement,
-  player2 = document.querySelector('.points-pc') as HTMLDivElement;
+  PCPlayer = document.querySelector('.points-pc') as HTMLDivElement,
+  roundsHTML = document.querySelector('.round') as HTMLDivElement,
+  empateHTML = document.querySelector('.empate') as HTMLDivElement;
 let pointsPlayer1: number = 0,
   pointsPC: number = 0,
   rounds: number = 0,
@@ -99,6 +101,15 @@ const pointsHTML = (
   empate: number,
   rounds: number
 ): void => {
+  console.log(player);
+  console.log(PC);
+  console.log(empate);
+  console.log(rounds);
+
+  player1.textContent = player.toString();
+  PCPlayer.textContent = PC.toString();
+  roundsHTML.textContent = rounds.toString();
+  empateHTML.textContent = empate.toString();
   if (rounds === 3) {
     disabledButton(rock);
     disabledButton(paper);
@@ -107,13 +118,14 @@ const pointsHTML = (
       `Puntos Jugador ${player}\nPuntos PC ${PC}\nRonda ${rounds}\nEmpate ${empate}`
     );
   }
+
   if (rounds >= 1) {
     reset.classList.remove('disabled');
     reset.classList.add('game-init');
   }
-  return console.log(
+  /*   return console.log(
     `Puntos Jugador ${player}\nPuntos PC ${PC}\nRonda ${rounds}\nEmpate ${empate}`
-  );
+  ); */
 };
 
 const resetGame = (): void => {
@@ -126,6 +138,10 @@ const resetGame = (): void => {
   pointsPC = 0;
   rounds = 0;
   empate = 0;
+  player1.textContent = '0';
+  PCPlayer.textContent = '0';
+  roundsHTML.textContent = '0';
+  empateHTML.textContent = '0';
   disabledButton(reset);
   if (rounds >= 0) {
     enableButton(reset);

@@ -2,7 +2,7 @@ import { buttonDisabled } from './disabledButton/disabledButton.js';
 import { htmlVariables } from './htmlVariables/variables.js';
 const { disabledButton, enableButton } = buttonDisabled();
 const { rock, paper, scissor, reset } = htmlVariables();
-const player1 = document.querySelector('.points-player-1'), player2 = document.querySelector('.points-pc');
+const player1 = document.querySelector('.points-player-1'), PCPlayer = document.querySelector('.points-pc'), roundsHTML = document.querySelector('.round'), empateHTML = document.querySelector('.empate');
 let pointsPlayer1 = 0, pointsPC = 0, rounds = 0, empate = 0;
 addEventListener('DOMContentLoaded', () => {
     rock.addEventListener('click', () => playingVsPc('rock'));
@@ -81,6 +81,14 @@ const logiScissor = (scissor = 2, PC = 0) => {
     }
 };
 const pointsHTML = (player, PC, empate, rounds) => {
+    console.log(player);
+    console.log(PC);
+    console.log(empate);
+    console.log(rounds);
+    player1.textContent = player.toString();
+    PCPlayer.textContent = PC.toString();
+    roundsHTML.textContent = rounds.toString();
+    empateHTML.textContent = empate.toString();
     if (rounds === 3) {
         disabledButton(rock);
         disabledButton(paper);
@@ -91,7 +99,6 @@ const pointsHTML = (player, PC, empate, rounds) => {
         reset.classList.remove('disabled');
         reset.classList.add('game-init');
     }
-    return console.log(`Puntos Jugador ${player}\nPuntos PC ${PC}\nRonda ${rounds}\nEmpate ${empate}`);
 };
 const resetGame = () => {
     reset.classList.add('disabled');
@@ -103,6 +110,10 @@ const resetGame = () => {
     pointsPC = 0;
     rounds = 0;
     empate = 0;
+    player1.textContent = '0';
+    PCPlayer.textContent = '0';
+    roundsHTML.textContent = '0';
+    empateHTML.textContent = '0';
     disabledButton(reset);
     if (rounds >= 0) {
         enableButton(reset);
