@@ -5,10 +5,11 @@
 /* 
 
   1. Title
-  3. Container Game
-  4. Container Players
-  5. Player 1 and PC
-  6. Points Players
+  2. Container Game
+  3. Container Players
+  4. Player 1 and PC
+  5. Points Players
+  6. Alerta de victoria
 
 */
 
@@ -89,3 +90,5 @@
   font-family: var(--font-Game);
   font-size: 4rem;
 }
+
+/* 6.Alerta Victoria */
