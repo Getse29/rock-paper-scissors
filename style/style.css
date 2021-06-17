@@ -76,7 +76,7 @@
 }
 
 /* 4. Container Players */
-.players{
+.stats{
   max-width: 95%;
   width: 80rem;
   margin: 5rem auto 0;
@@ -85,12 +85,7 @@
 }
 
 /* 5. Player 1 and PC*/
-.player-1, .player-2{
-  font-size: 2rem;
-}
-
-/* 6. Points Players */
-.points-player-1, .points-pc{
+.points-player-1, .points-pc, .ronda, .empa{
   font-family: var(--font-Game);
   font-size: 4rem;
 }
