@@ -1,5 +1,6 @@
 import { buttonDisabled } from './disabledButton/disabledButton.js';
-import { htmlVariables } from './htmlVariables/variables.js';
+import { htmlVariables } from './html/variables.js';
+import { resetHTMLPoint } from './html/resetPoints.js';
 
 /* variables */
 const { disabledButton, enableButton } = buttonDisabled();
@@ -123,9 +124,6 @@ const pointsHTML = (
     reset.classList.remove('disabled');
     reset.classList.add('game-init');
   }
-  /*   return console.log(
-    `Puntos Jugador ${player}\nPuntos PC ${PC}\nRonda ${rounds}\nEmpate ${empate}`
-  ); */
 };
 
 const resetGame = (): void => {
@@ -134,14 +132,16 @@ const resetGame = (): void => {
   enableButton(rock);
   enableButton(paper);
   enableButton(scissor);
+
   pointsPlayer1 = 0;
   pointsPC = 0;
   rounds = 0;
   empate = 0;
-  player1.textContent = '0';
-  PCPlayer.textContent = '0';
-  roundsHTML.textContent = '0';
-  empateHTML.textContent = '0';
+
+  resetHTMLPoint(player1);
+  resetHTMLPoint(PCPlayer);
+  resetHTMLPoint(roundsHTML);
+  resetHTMLPoint(empateHTML);
   disabledButton(reset);
   if (rounds >= 0) {
     enableButton(reset);

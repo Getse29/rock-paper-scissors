@@ -1,5 +1,6 @@
 import { buttonDisabled } from './disabledButton/disabledButton.js';
-import { htmlVariables } from './htmlVariables/variables.js';
+import { htmlVariables } from './html/variables.js';
+import { resetHTMLPoint } from './html/resetPoints.js';
 const { disabledButton, enableButton } = buttonDisabled();
 const { rock, paper, scissor, reset } = htmlVariables();
 const player1 = document.querySelector('.points-player-1'), PCPlayer = document.querySelector('.points-pc'), roundsHTML = document.querySelector('.round'), empateHTML = document.querySelector('.empate');
@@ -110,10 +111,10 @@ const resetGame = () => {
     pointsPC = 0;
     rounds = 0;
     empate = 0;
-    player1.textContent = '0';
-    PCPlayer.textContent = '0';
-    roundsHTML.textContent = '0';
-    empateHTML.textContent = '0';
+    resetHTMLPoint(player1);
+    resetHTMLPoint(PCPlayer);
+    resetHTMLPoint(roundsHTML);
+    resetHTMLPoint(empateHTML);
     disabledButton(reset);
     if (rounds >= 0) {
         enableButton(reset);
