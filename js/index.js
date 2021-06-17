@@ -9,6 +9,8 @@ addEventListener('DOMContentLoaded', () => {
     paper.addEventListener('click', () => playingVsPc('paper'));
     scissor.addEventListener('click', () => playingVsPc('scissor'));
     reset.addEventListener('click', () => resetGame());
+    reset.classList.add('disabled');
+    reset.classList.remove('game-init');
 });
 const playingVsPc = (eventPlayer = '') => {
     const PC = Math.floor(Math.random() * 6) + 1;
@@ -88,7 +90,6 @@ const pointsHTML = (player, PC, empate, rounds) => {
     if (rounds >= 1) {
         reset.classList.remove('disabled');
         reset.classList.add('game-init');
-        return console.log(`Puntos Jugador ${player}\nPuntos PC ${PC}\nRonda ${rounds}\nEmpate ${empate}`);
     }
     return console.log(`Puntos Jugador ${player}\nPuntos PC ${PC}\nRonda ${rounds}\nEmpate ${empate}`);
 };
@@ -103,7 +104,7 @@ const resetGame = () => {
     rounds = 0;
     empate = 0;
     disabledButton(reset);
-    if (rounds === 0) {
+    if (rounds >= 0) {
         enableButton(reset);
     }
     else if (rounds === 3) {
