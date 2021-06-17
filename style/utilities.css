@@ -1,10 +1,16 @@
 :root {
   --font-primary: 'Kanit', sans-serif;
   --font-Game: 'Press Start 2P', cursive;
+  --colorPrimario: #2b90d9;
+  --colorSecundario: #282c37;
+}
+
+h3, p{
+  margin: 0 ;
 }
 
 .bg-color{
-  background-color: #282c37;
+  background-color: var(--colorSecundario);
   text-align: center;
   color: #ffffff;
   font-family: var(--font-primary);
