@@ -1,4 +1,5 @@
 const buttonDisabled = () => {
+    const rock = document.querySelector('.rock'), paper = document.querySelector('.paper'), scissor = document.querySelector('.scissor');
     const disabledButton = (button) => {
         return (button.disabled = true);
     };
@@ -8,6 +9,9 @@ const buttonDisabled = () => {
     return {
         disabledButton,
         enableButton,
+        rock,
+        paper,
+        scissor,
     };
 };
 export { buttonDisabled };

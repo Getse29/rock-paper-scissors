@@ -29,12 +29,10 @@
   justify-content: space-evenly;
 }
 
+
 .game-init{
   color: #fff;
   cursor: pointer;
-}
-
-.game-init{
   padding: 1rem 2rem;
   border-radius: .3rem;
   font-weight: 300;
@@ -45,6 +43,22 @@
 }
 .game-init:last-child{
   background-color: rgb(216, 10, 10);
+}
+
+.disabled{
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: .3rem;
+  font-weight: 300;
+}
+
+.disabled:first-child{
+  background-color: rgb(111, 211, 133);
+
+}
+
+.disabled:last-child{
+  background: rgb(216, 98, 98);
 }
 
 /* 3. Container Game */
