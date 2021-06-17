@@ -3,7 +3,7 @@ import { htmlVariables } from './html/variables.js';
 import { resetHTMLPoint } from './html/resetPoints.js';
 const { disabledButton, enableButton } = buttonDisabled();
 const { rock, paper, scissor, reset } = htmlVariables();
-const player1 = document.querySelector('.points-player-1'), PCPlayer = document.querySelector('.points-pc'), roundsHTML = document.querySelector('.round'), empateHTML = document.querySelector('.empate');
+const player1 = document.querySelector('.points-player-1'), PCPlayer = document.querySelector('.points-pc'), roundsHTML = document.querySelector('.ronda'), empateHTML = document.querySelector('.empa');
 let pointsPlayer1 = 0, pointsPC = 0, rounds = 0, empate = 0;
 addEventListener('DOMContentLoaded', () => {
     rock.addEventListener('click', () => playingVsPc('rock'));

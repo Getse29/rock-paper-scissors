@@ -9,8 +9,8 @@ const { rock, paper, scissor, reset } = htmlVariables();
 
 const player1 = document.querySelector('.points-player-1') as HTMLDivElement,
   PCPlayer = document.querySelector('.points-pc') as HTMLDivElement,
-  roundsHTML = document.querySelector('.round') as HTMLDivElement,
-  empateHTML = document.querySelector('.empate') as HTMLDivElement;
+  roundsHTML = document.querySelector('.ronda') as HTMLDivElement,
+  empateHTML = document.querySelector('.empa') as HTMLDivElement;
 let pointsPlayer1: number = 0,
   pointsPC: number = 0,
   rounds: number = 0,
